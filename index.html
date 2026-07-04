@@ -728,7 +728,7 @@ function drawHero(){
   const x=P.x+P.w/2, y=P.y, t=P.anim, run=P.state==='run';
   const flick=P.inv>0&&Math.floor(P.inv*12)%2===0;
   if(flick)return;
-  ctx.save();ctx.translate(x,y);ctx.scale(P.face,1);
+  ctx.save();ctx.translate(x,y);ctx.scale(-P.face,1);
   if(P.dead)ctx.rotate(Math.sin(t*3)*.3);
 
   let bob=0, lean=0, sx=1, sy=1;
